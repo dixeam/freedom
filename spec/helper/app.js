@@ -20,11 +20,14 @@ child.on('output', function(value) {
 
 // For testing manifest-defined apis
 app.on('do-log', function(value) {
+  console.log("received do-log: " + value);
   log.log(value);
 });
 
 app.on('get-log', function() {
+  console.log("received get-log!");
   getlog.get().then(function(output) {
+    console.log("get-log success");
     app.emit('log', output);
   });
 });

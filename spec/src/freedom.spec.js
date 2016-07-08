@@ -46,9 +46,12 @@ describe("freedom", function() {
       app.on('log', function(value) {
         var log = JSON.parse(value);
         if (log.length < 2) {
+          console.log("still getting!");
           app.emit('get-log');
           return;
         }
+        console.log("should do expects");
+        console.info(log);
         expect(log[0][2]).toEqual('log Msg');
         expect(log[1][2]).toEqual('another Log');
         expect(log[1][0] - log[0][0]).toBeGreaterThan(-1);
