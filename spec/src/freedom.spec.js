@@ -1,7 +1,7 @@
 var testUtil = require('../util');
 
-//Run jasmine tests with 10 second timeout.
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+//Run jasmine tests with 60 second timeout.
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
 
 describe("freedom", function() {
   var freedom;
